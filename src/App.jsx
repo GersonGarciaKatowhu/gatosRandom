@@ -3,7 +3,7 @@ import { useCatImage } from './hooks/useCatImage'
 import { useCatFact } from './hooks/useCatFact'
 
 function App () {
-  const { refreshRandomFact, fact } = useCatFact()
+  const { refreshRandomFact, fact, isLoading } = useCatFact()
   const { urlImage } = useCatImage({ fact })
 
   const handleClick = () => {
@@ -12,10 +12,14 @@ function App () {
 
   return (
     <main className='container'>
-      <h1>app de gatos... </h1>
+      <h1>"The cats are mysterious creatures with curious words."</h1>
       <section>
-        {fact && <p>{fact}</p>}
-        {urlImage && <img src={urlImage} />}
+        <p>
+          {!isLoading ? fact : 'Loading fact...'}
+        </p>
+        <div className='image-container'>
+          {isLoading ? <p>Loading image...</p> : <img src={urlImage} />}
+        </div>
         <button onClick={handleClick}>Get new fact</button>
       </section>
     </main>

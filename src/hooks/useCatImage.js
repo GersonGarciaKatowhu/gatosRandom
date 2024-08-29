@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const CAT_ENDPOINT_IMAGE_URL = firstWord => `https://cataas.com/cat/says/${firstWord}`
+const CAT_ENDPOINT_IMAGE_URL = firstWords => `https://cataas.com/cat/says/${firstWords}`
 
 export function useCatImage ({ fact }) {
   const [urlImage, setUrlImage] = useState('')
