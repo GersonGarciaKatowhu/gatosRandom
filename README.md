@@ -12,7 +12,7 @@ Esta aplicación te permite generar un hecho aleatorio sobre gatos y mostrar una
 
 1. **Clona el Repositorio**
 
-   ```bash
+```bash
   gh repo clone GersonGarciaKatowhu/gatosRandom
 ```
 2. **Instala las dependencias**
